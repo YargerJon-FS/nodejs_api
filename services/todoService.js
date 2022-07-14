@@ -3,13 +3,13 @@ require('dotenv').config();
 
 
 const todoService = async () => {
-    console.log('Real Todos');
+    console.log('Real Universities');
     return await axios.get(`${process.env.todosURL}`);
 };
 
-const todoServiceById = async (id) => {
-    console.log('Real todos by ID');
-    return await axios.get(`${process.env.todosURL}${id}`);
+const todoServiceByName = async (name) => {
+    console.log('Real universitties by Name');
+    return await axios.get(`${process.env.todosURL}${NAME}`);
 };
 
-module.exports = {todoService, todoServiceById };
+module.exports = {todoService, todoServiceByName };

@@ -2,72 +2,145 @@
 const todoService = async () => {
     console.log('Mocked Todos');
     return Promise.resolve({
-        data:[{ "userId": 1,
-        "id": 1,
-        "title": "delectus aut autem",
-        "completed": false
-    },
-    {
-        "userId": 1,
-        "id": 2,
-        "title": "quis ut nam facilis et officia qui",
-        "completed": false
-    },
-    {
-        "userId": 1,
-        "id": 3,
-        "title": "fugiat veniam minus",
-        "completed": false
-    },
-    {
-        "userId": 1,
-        "id": 4,
-        "title": "et porro tempora",
-        "completed": true
-    },
-    {
-        "userId": 1,
-        "id": 5,
-        "title": "laboriosam mollitia et enim quasi adipisci quia provident illum",
-        "completed": false
-    },
-    {
-        "userId": 1,
-        "id": 6,
-        "title": "qui ullam ratione quibusdam voluptatem quia omnis",
-        "completed": false
-    },
-    {
-        "userId": 1,
-        "id": 7,
-        "title": "illo expedita consequatur quia in",
-        "completed": false
-    },
-    {
-        "userId": 1,
-        "id": 8,
-        "title": "quo adipisci enim quam ut ab",
-        "completed": true
-    },
-    {
-        "userId": 1,
-        "id": 9,
-        "title": "molestiae perspiciatis ipsa",
-        "completed": false
-    },
-    {
-        "userId": 1,
-        "id": 10,
-        "title": "illo est ratione doloremque quia maiores aut",
-        "completed": true
-    }]
+        data:[{
+            "domains": [
+            "marywood.edu"
+            ],
+            "web_pages": [
+            "http://www.marywood.edu"
+            ],
+            "state-province": null,
+            "name": "Marywood University",
+            "country": "United States",
+            "alpha_two_code": "US"
+            },
+            {
+            "domains": [
+            "lindenwood.edu"
+            ],
+            "web_pages": [
+            "http://www.lindenwood.edu/"
+            ],
+            "state-province": null,
+            "name": "Lindenwood University",
+            "country": "United States",
+            "alpha_two_code": "US"
+            },
+            {
+            "domains": [
+            "sullivan.edu"
+            ],
+            "web_pages": [
+            "https://sullivan.edu/"
+            ],
+            "state-province": null,
+            "name": "Sullivan University",
+            "country": "United States",
+            "alpha_two_code": "US"
+            },
+            {
+            "domains": [
+            "fscj.edu"
+            ],
+            "web_pages": [
+            "https://www.fscj.edu/"
+            ],
+            "state-province": null,
+            "name": "Florida State College at Jacksonville",
+            "country": "United States",
+            "alpha_two_code": "US"
+            },
+            {
+            "domains": [
+            "xavier.edu"
+            ],
+            "web_pages": [
+            "https://www.xavier.edu/"
+            ],
+            "state-province": null,
+            "name": "Xavier University",
+            "country": "United States",
+            "alpha_two_code": "US"
+            },
+            {
+            "domains": [
+            "tusculum.edu"
+            ],
+            "web_pages": [
+            "https://home.tusculum.edu/"
+            ],
+            "state-province": null,
+            "name": "Tusculum College",
+            "country": "United States",
+            "alpha_two_code": "US"
+            },
+            {
+            "domains": [
+            "cst.edu"
+            ],
+            "web_pages": [
+            "https://cst.edu/"
+            ],
+            "state-province": null,
+            "name": "Claremont School of Theology",
+            "country": "United States",
+            "alpha_two_code": "US"
+            },
+            {
+            "domains": [
+            "columbiasc.edu"
+            ],
+            "web_pages": [
+            "https://www.columbiasc.edu/"
+            ],
+            "state-province": null,
+            "name": "Columbia College (SC)",
+            "country": "United States",
+            "alpha_two_code": "US"
+            },
+            {
+            "domains": [
+            "clpccd.edu"
+            ],
+            "web_pages": [
+            "http://www.clpccd.edu/"
+            ],
+            "state-province": null,
+            "name": "Chabot-Las Positas Community College District",
+            "country": "United States",
+            "alpha_two_code": "US"
+            },
+            {
+            "domains": [
+            "keller.edu"
+            ],
+            "web_pages": [
+            "https://www.keller.edu/"
+            ],
+            "state-province": null,
+            "name": "Keller Graduate School of Management",
+            "country": "United States",
+            "alpha_two_code": "US"
+            },
+            {
+            "domains": [
+            "monroecollege.edu"
+            ],
+            "web_pages": [
+            "https://monroecollege.edu/"
+            ],
+            "state-province": null,
+            "name": "Monroe College",
+            "country": "United States",
+            "alpha_two_code": "US"
+            }]
     })
 };
 
-const todoServiceById = async (id) => {
-    console.log('Mocked todos by ID');
-    return Promise.resolve({data:{userId: 1, id: 3, title: "fugiat veniam minus", completed: false},
+const todoServiceByName = async (name) => {
+    console.log('Mocked todos by name');
+    return Promise.resolve({data:{name: "Lindenwood University"},
     });
 };
 
-module.exports = {todoService, todoServiceById };
+module.exports = {todoService, todoServiceByName };

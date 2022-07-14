@@ -17,7 +17,7 @@ todosRouter.get('/', (req, res, next) => {
 });
 
 todosRouter.get('/:id', (req,res,next) => {
-todoServiceById(req.params.id)
+todoServiceByName(req.params.name)
 .then((result) =>{
     res.status(200).json(result.data);
 })
