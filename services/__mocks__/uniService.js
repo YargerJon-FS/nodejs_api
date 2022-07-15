@@ -1,5 +1,5 @@
 
-const todoService = async () => {
+const uniService = async () => {
     console.log('Mocked Todos');
     return Promise.resolve({
         data:[{
@@ -137,10 +137,10 @@ const todoService = async () => {
     })
 };
 
-const todoServiceByName = async (name) => {
+const uniServiceByName = async (name) => {
     console.log('Mocked todos by name');
     return Promise.resolve({data:{name: "Lindenwood University"},
     });
 };
 
-module.exports = {todoService, todoServiceByName };
+module.exports = {uniService, uniServiceByName };

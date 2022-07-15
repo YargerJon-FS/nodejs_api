@@ -7,7 +7,7 @@ app.get('/', (req, res, next) => {
     res.status(200).json({ message: "Service is up" });
 });
 //router middleware
-app.use('/', uniRouter);
+app.use('/uni', uniRouter);
 // add middleware to handle errors and bad url paths
 app.use((req, res, next) => {
     const error = new Error("NOT FOUND!!");
