@@ -1,9 +1,9 @@
 const express = require('express');
-const todosRouter = express.Router();
-const {todoService, todoServiceByName} = require('../services/todoService');
+const uniRouter = express.Router();
+const {uniService, uniServiceByName} = require('../services/uniService');
 
-todosRouter.get('/', (req, res, next) => {
-    todoService()
+uniRouter.get('/', (req, res, next) => {
+    uniService()
     .then((result) =>{
         res.status(200).json(result.data);
     })
@@ -16,8 +16,8 @@ todosRouter.get('/', (req, res, next) => {
     });
 });
 
-todosRouter.get('/:name', (req,res,next) => {
-todoServiceByName(req.params.name)
+uniRouter.get('/:name',(req,res,next) => {
+uniServiceByName(req.params.name)
 .then((result) =>{
     res.status(200).json(result.data);
 })
@@ -30,4 +30,4 @@ todoServiceByName(req.params.name)
     });
 });
 
-module.exports = todosRouter;
+module.exports = uniRouter;

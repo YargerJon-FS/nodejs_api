@@ -1,5 +1,5 @@
 const express = require('express');
-const todosRouter = require('../router/todosRouter');
+const uniRouter = require('../router/uniRouter');
 const app = express ();
 //http://Localhost:3000
 //http://universities.hipolabs.com/
@@ -7,7 +7,7 @@ app.get('/', (req, res, next) => {
     res.status(200).json({ message: "Service is up" });
 });
 //router middleware
-app.use('/', todosRouter);
+app.use('/', uniRouter);
 // add middleware to handle errors and bad url paths
 app.use((req, res, next) => {
     const error = new Error("NOT FOUND!!");
