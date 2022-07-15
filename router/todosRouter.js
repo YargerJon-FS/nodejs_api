@@ -1,6 +1,6 @@
 const express = require('express');
 const todosRouter = express.Router();
-const {todoService, todoServiceById} = require('../services/todoService');
+const {todoService, todoServiceByName} = require('../services/todoService');
 
 todosRouter.get('/', (req, res, next) => {
     todoService()
@@ -16,7 +16,7 @@ todosRouter.get('/', (req, res, next) => {
     });
 });
 
-todosRouter.get('/:id', (req,res,next) => {
+todosRouter.get('/:name', (req,res,next) => {
 todoServiceByName(req.params.name)
 .then((result) =>{
     res.status(200).json(result.data);
